@@ -12,6 +12,6 @@ void PORTF_init(void){
 }
 
 void led_on (void){
-	GPIO_PORTF_DATA_R &= 0x0E; // Turn leds of if they are on
+	GPIO_PORTF_DATA_R &= ~0x0E; // Turn leds of if they are on
 	GPIO_PORTF_DATA_R |= 0x04; //Led in pin2 will Turn on
 }

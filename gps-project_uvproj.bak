@@ -416,16 +416,6 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>mostafa.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\mostafa.c</FilePath>
-            </File>
-            <File>
-              <FileName>mahmoud.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\mahmoud.c</FilePath>
-            </File>
-            <File>
               <FileName>karim.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\karim.c</FilePath>
@@ -436,14 +426,19 @@
               <FilePath>.\nasser.c</FilePath>
             </File>
             <File>
+              <FileName>mahmoud.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mahmoud.c</FilePath>
+            </File>
+            <File>
+              <FileName>mostafa.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\mostafa.c</FilePath>
+            </File>
+            <File>
               <FileName>david.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\david.c</FilePath>
-            </File>
-            <File>
-              <FileName>mohanad.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\mohanad.c</FilePath>
             </File>
           </Files>
         </Group>

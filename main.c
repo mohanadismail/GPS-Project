@@ -1,7 +1,6 @@
 #include "Headers/tm4c123gh6pm.h"
-#include "karim.c"
+#include "karim.h"
 
 int main () {
-	PORTF_init();
-	led_on();
+	
 }

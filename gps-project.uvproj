@@ -415,6 +415,11 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>karim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\karim.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

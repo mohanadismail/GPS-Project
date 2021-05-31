@@ -10,7 +10,14 @@ void PORTF_init(void){
 		GPIO_PORTF_AMSEL_R&= ~0x0E;
 }
 
-void led_on (void){
+void led_on (char color){
 	GPIO_PORTF_DATA_R &= ~0x0E; // Turn leds of if they are on
-	GPIO_PORTF_DATA_R |= 0x04; //Led in pin2 will Turn on
+	if(color == "r"){
+		GPIO_PORTF_DATA_R |= 0x02; //Red led turns on when input is "r"
+	}else if(color == "b"){
+		GPIO_PORTF_DATA_R |= 0x04; //Green led turns on when input is "g"
+	}else{
+		GPIO_PORTF_DATA_R |= 0x08; //Otherwise Blue led turns on
+	}
+	 
 }

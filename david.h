@@ -1,10 +1,10 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 float getLatitude(char *data[])
 {
-    if (data[0] == "$GPGAA")
+    if (!strcmp(data[0], "$GPGGA"))
     {
         return strtof(data[2], NULL);
     }
@@ -12,16 +12,16 @@ float getLatitude(char *data[])
 
 float getLongitude(char *data[])
 {
-    if (data[0] == "$GPGAA")
+    if (!strcmp(data[0], "$GPGGA"))
     {
         return strtof(data[4], NULL);
     }
 }
-bool validity(char *data[])
+int validity(char *data[])
 {
-    if (data[0] == "$GPGAA")
+    if (!strcmp(data[0], "$GPGGA"))
     {
-        if (data[6] == 1)
+        if (*data[6] == '1')
         {
             return 1;
         }

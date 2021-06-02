@@ -1,7 +1,7 @@
 #include <math.h>
 #define rad(x) x*(3.14159/180)
 
-unsigned int distanceBetweenTwoPoints_Harvesine(float lat_1, float long_1, float lat_2, float long_2)
+unsigned int distanceBetweenTwoPoints(float lat_1, float long_1, float lat_2, float long_2) // Haversine Formula
 { 
 	// converting Coordinates degree values into radian
 	float rad_lat_1 = rad(lat_1) , rad_lat_2 = rad(lat_2);

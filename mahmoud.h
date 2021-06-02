@@ -171,3 +171,69 @@ void tens_digit(int j){
 		  break;
 	}
 }
+void ones_digit(int k){
+	switch (k){
+		case 0:
+			GPIO_PORTB_DATA_R |= 0x0C;
+		  GPIO_PORTD_DATA_R |= 0xC0;
+		  GPIO_PORTE_DATA_R |= 0x0C;
+		  GPIO_PORTE_DATA_R &= ~ 0x01;
+		  break;
+		case 1:
+			GPIO_PORTB_DATA_R |= 0x08;
+		  GPIO_PORTB_DATA_R &= ~ 0x04;
+		  GPIO_PORTD_DATA_R &= ~ 0xC0;
+		  GPIO_PORTE_DATA_R |= 0x08;
+		  GPIO_PORTE_DATA_R &= ~ 0x05;
+		  break;
+		case 2:
+			GPIO_PORTB_DATA_R &= ~ 0x0C;
+		  GPIO_PORTD_DATA_R |= 0xC0;
+		  GPIO_PORTE_DATA_R |= 0x0D;
+			break;
+		case 3:
+			GPIO_PORTB_DATA_R |= 0x08;
+		  GPIO_PORTB_DATA_R &= ~ 0x04;
+		  GPIO_PORTD_DATA_R |= 0x40;
+		  GPIO_PORTD_DATA_R &= ~ 0x80;
+		  GPIO_PORTE_DATA_R |= 0x0D;
+			break;
+		case 4:
+			GPIO_PORTB_DATA_R |= 0x0C;
+		  GPIO_PORTD_DATA_R &= ~ 0xC0;
+		  GPIO_PORTE_DATA_R |= 0x09;
+		  GPIO_PORTE_DATA_R &= ~ 0x04;
+		  break;
+		case 5:
+			GPIO_PORTB_DATA_R |= 0x0C;
+		  GPIO_PORTD_DATA_R |= 0x40;
+		  GPIO_PORTD_DATA_R &= ~ 0x80;
+		  GPIO_PORTE_DATA_R |= 0x05;
+		  GPIO_PORTE_DATA_R &= ~ 0x08;
+		  break;
+		case 6:
+			GPIO_PORTB_DATA_R |= 0x0C;
+		  GPIO_PORTD_DATA_R |= 0xC0;
+		  GPIO_PORTE_DATA_R |= 0x01;
+		  GPIO_PORTE_DATA_R &= ~ 0x0C;
+		  break;
+		case 7:
+			GPIO_PORTB_DATA_R |= 0x08;
+		  GPIO_PORTB_DATA_R &= ~ 0x04;
+		  GPIO_PORTD_DATA_R &= ~ 0xC0;
+		  GPIO_PORTE_DATA_R |= 0x04;
+			GPIO_PORTE_DATA_R &= ~ 0x09;
+		  break;
+		case 8:
+			GPIO_PORTB_DATA_R |= 0x0C;
+		  GPIO_PORTD_DATA_R |= 0xC0;
+		  GPIO_PORTE_DATA_R |= 0x0D;
+		  break;
+		case 9:
+			GPIO_PORTB_DATA_R |= 0x0C;
+		  GPIO_PORTD_DATA_R |= 0x40;
+		  GPIO_PORTD_DATA_R &= ~ 0x80;
+		  GPIO_PORTE_DATA_R |= 0x0D;
+		  break;
+	}
+}

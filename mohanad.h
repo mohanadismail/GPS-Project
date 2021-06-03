@@ -1,10 +1,9 @@
 #include <string.h>
 
-void split_GPGGA (char str[]) {
+void split_GPGGA (char str[], char *data[15]) {
 	//str[] is a global variable
 	//This function takes the GPGGA message from str[] and splits it into tokens
 	//to easily extract quality indicator, latitude and longitude
-	char *data[15];
   data[0] = strtok(str, ",");
   int i = 0;
   while (data[i] != NULL && i < 14) {

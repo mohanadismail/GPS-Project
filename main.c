@@ -4,6 +4,7 @@
 #include "mohanad.h"
 
 char str[150]; //global variable for storing GPGGA message
+char *data[15]; //global variable containing tokens of GPGGA message
 
 
 int main () {

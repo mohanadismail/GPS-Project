@@ -222,7 +222,7 @@ void ones_digit(int k){
 		  GPIO_PORTB_DATA_R &= ~ 0x04;
 		  GPIO_PORTD_DATA_R &= ~ 0xC0;
 		  GPIO_PORTE_DATA_R |= 0x0C;
-			GPIO_PORTE_DATA_R &= ~ 0x01;
+		  GPIO_PORTE_DATA_R &= ~ 0x01;
 		  break;
 		case 8:
 		  GPIO_PORTB_DATA_R |= 0x0C;

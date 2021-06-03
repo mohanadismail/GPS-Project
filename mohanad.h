@@ -1,6 +1,9 @@
 #include <string.h>
 
-void split_GPGGA (char str[], char *data[15]) {
+extern char str[150]; //global variable for storing GPGGA message
+extern char *data[15]; //global variable containing tokens of GPGGA message
+
+void split_GPGGA () {
 	//str[] is a global variable
 	//This function takes the GPGGA message from str[] and splits it into tokens
 	//to easily extract quality indicator, latitude and longitude
@@ -12,7 +15,7 @@ void split_GPGGA (char str[], char *data[15]) {
   }
 }
 
-void extract_GPGGA_message(char str[]) {
+void extract_GPGGA_message() {
 	//str[] is a global variable
 	//This function keeps on receiving input from the UART until
 	//it detects the GPGGA message, then stores the message in str[]

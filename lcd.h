@@ -58,3 +58,16 @@ void lcd_ready (void){
 	lcd_cmd(cursor_on);  
 	lcd_cmd(cursor_at_1stline);
 }
+void print(int x){
+	lcd_ready();
+	int y, z, v;
+	y = x % 10;
+	x /= 10;
+	z = x % 10;
+	x /= 10;
+	v = x;
+	lcd_data((char) v);
+	lcd_data((char) z);
+	lcd_data((char) y);
+	lcd_data('m');
+}

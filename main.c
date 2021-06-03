@@ -1,6 +1,7 @@
 #include "Headers/tm4c123gh6pm.h"
 #include "karim.h"
-#include "mahmoud.h"
+#include "7_segments.h"
+#include "mohanad.h"
 
 int main () {
 	

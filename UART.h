@@ -5,7 +5,7 @@ void inituart()
  
   SYSCTL_RCGCGPIO_R |= 0x02 ;  /* activate clock for port B */
 
-  while (SYSCTL_PRGPIO_R & 0x02 == 0) ; /* wait for stabilization */
+  while (SYSCTL_PRGPIO_R & 0x02 == 0){} ; /* wait for stabilization */
 
   GPIO_PORTB_CR_R = 0x03 ; /* allow changes to port A0,A1 */
 

@@ -13,4 +13,11 @@ int main () {
 	INIT_UART1();
 	segments_initialize();
 	PORTF_init();
+	led_on('r'); //turn red led on until gps fix
+	extract_GPGGA_message(); //take UART input
+	split_GPGGA();
+	while (!validity(data)) { //wait till gps fix
+		extract_GPGGA_message();
+		split_GPGGA();
+	}
 }

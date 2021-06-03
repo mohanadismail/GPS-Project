@@ -1,4 +1,5 @@
 #include <string.h>
+#include "UART.h"
 
 extern char str[150]; //global variable for storing GPGGA message
 extern char *data[15]; //global variable containing tokens of GPGGA message

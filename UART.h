@@ -1,5 +1,5 @@
 
-void init_UART1 ()
+void INIT_UART1 ()
 
 {
 

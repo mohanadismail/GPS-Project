@@ -6,6 +6,7 @@
 #include "distanceBetweenTwoPoints.h"
 #include "UART.h"
 
+float distance = 0;
 
 int main () {
 	//All initilizations

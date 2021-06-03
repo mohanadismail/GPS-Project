@@ -1,6 +1,6 @@
 #include "tm4c123gh6pm.h"
 
-void intialize(){
+void lcd_initialize(){
 	
 	//A
 	SYSCTL_RCGCGPIO_R |= 0x01;          
@@ -222,7 +222,7 @@ void ones_digit(int k){
 		  GPIO_PORTB_DATA_R &= ~ 0x04;
 		  GPIO_PORTD_DATA_R &= ~ 0xC0;
 		  GPIO_PORTE_DATA_R |= 0x0C;
-			GPIO_PORTE_DATA_R &= ~ 0x01;
+		  GPIO_PORTE_DATA_R &= ~ 0x01;
 		  break;
 		case 8:
 		  GPIO_PORTB_DATA_R |= 0x0C;
@@ -240,7 +240,6 @@ void ones_digit(int k){
 
 void print(int x){
 	int v, y, z;
-	intialize();
 	v = x % 10;
 	x /= 10;
 	y = x % 10;

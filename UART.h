@@ -1,6 +1,4 @@
 
-
-
 void init_UART1 ()
 
 {
@@ -14,7 +12,6 @@ while (SYSCTL_PRGPIO_R & 0x02 == 0){} ; /* wait for stabilization */
 GPIO_PORTB_CR_R |= 0x03 ; /* allow changes to port B0,B1 */
 
 GPIO_PORTB_AMSEL_R &= ~0x03;  /* disable analog in port B0,B1 */
-
 
 GPIO_PORTB_PCTL_R |= 0x00000011 ; /* PB0 and PB1 configure for UART module */
 

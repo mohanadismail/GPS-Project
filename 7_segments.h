@@ -1,6 +1,6 @@
 #include "tm4c123gh6pm.h"
 
-void 7_segments_initialize(){
+void segments_initialize(){
 	
 	//A
 	SYSCTL_RCGCGPIO_R |= 0x01;          

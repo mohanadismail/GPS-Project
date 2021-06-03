@@ -1,6 +1,7 @@
 #include "Headers/tm4c123gh6pm.h"
 float glbl_long; //Longtitude of the saved place
 float glbl_lat;	//Latitude of the saved place
+float error_range = 0.00005; //allowed error range
 
 void PORTF_init(void){
 	SYSCTL_RCGCGPIO_R|= 0x20;
@@ -15,17 +16,16 @@ void PORTF_init(void){
 void led_on (char color){
 	GPIO_PORTF_DATA_R &= ~0x0E; // Turn leds of if they are on
 	if(color == 'r'){
-		GPIO_PORTF_DATA_R |= 0x02; //Red led turns on when input is "r"
+		GPIO_PORTF_DATA_R |= 0x02; //Red led turns on when input is 'r'
 	}else if(color == 'b'){
-		GPIO_PORTF_DATA_R |= 0x04; //Green led turns on when input is "g"
+		GPIO_PORTF_DATA_R |= 0x04; //Blue led turns on when input is 'b'
 	}else{
-		GPIO_PORTF_DATA_R |= 0x08; //Otherwise Blue led turns on
+		GPIO_PORTF_DATA_R |= 0x08; //Otherwise Green led turns on
 	}
 	 
 }
 
 int isHere(float gps_long, float gps_lat){
-	float error_range =0.5; //allowed error range
 	if(glbl_long-error_range<=gps_long && glbl_long+error_range>=gps_long){ //check the allowable range of longtitude
 		if(gps_lat<=glbl_lat+error_range && gps_lat>=glbl_lat-error_range){	//check the allowable range of latitude
 		return 1;

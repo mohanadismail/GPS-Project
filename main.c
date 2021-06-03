@@ -8,5 +8,8 @@
 
 
 int main () {
-	
+	//All initilizations
+	INIT_UART1();
+	segments_initialize();
+	PORTF_init();
 }

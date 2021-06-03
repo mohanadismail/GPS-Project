@@ -1,6 +1,6 @@
 #include "tm4c123gh6pm.h"
 
-void intialize(){
+void lcd_initialize(){
 	
 	//A
 	SYSCTL_RCGCGPIO_R |= 0x01;          
@@ -240,7 +240,6 @@ void ones_digit(int k){
 
 void print(int x){
 	int v, y, z;
-	intialize();
 	v = x % 10;
 	x /= 10;
 	y = x % 10;

@@ -4,6 +4,7 @@
 extern char str[150]; //global variable for storing GPGGA message
 extern char *data[15]; //global variable containing tokens of GPGGA message
 extern int data_length; //global variable that will be used to check gps fix
+int i;
 
 void split_GPGGA () {
 	//str[] is a global variable
@@ -21,7 +22,6 @@ void extract_GPGGA_message() {
 	//str[] is a global variable
 	//This function keeps on receiving input from the UART until
 	//it detects the GPGGA message, then stores the message in str[]
-  int i;  
 	str[0] = '$';
   str[1] = 'G';
   str[2] = 'P';

@@ -11,3 +11,13 @@ void buzzer_initialize(){
 	GPIO_PORTB_AFSEL_R &= ~ 0x20;
 	GPIO_PORTB_PCTL_R &= ~ 0x00F00000;
 }
+void buzzer_on(void){
+	unsigned long i;
+	while(1){
+	buzzer_initialize();
+	GPIO_PORTB_DATA_R |= 0x20;
+	for(i = 1000000 ; i > 0 ; i--){}
+	GPIO_PORTB_DATA_R &= ~0x20;
+	for(i = 1000000 ; i > 0 ; i--){}
+	}
+}

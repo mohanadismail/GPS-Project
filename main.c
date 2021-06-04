@@ -4,6 +4,7 @@
 #include "GPGGA_functions.h"
 #include "Extract-Coordinates.h"
 #include "distanceBetweenTwoPoints.h"
+#include "buzzer.h"
 
 //Global variables
 float distance = 0;
@@ -36,6 +37,7 @@ int main () {
 		if (isHere(current_long, current_lat)) { //check if reached the destination
 			led_on('b'); //turn blue led on (you reached the destination)
 			print((int)distance); //show distance on 7-segments
+			buzzer_on(); //turn on buzzer
 			break;
 		}
 		extract_GPGGA_message(); //take new input

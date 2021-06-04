@@ -10,3 +10,4 @@
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\main.o: distanceBetweenTwoPoints.h
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\main.o: buzzer.h

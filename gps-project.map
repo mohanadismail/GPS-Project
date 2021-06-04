@@ -776,11 +776,11 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      4548        292          0         44        212       7931   main.o
+      4548        292          0         44        212       7947   main.o
        244          6        620          0        512       5364   startup_tm4c123.o
 
     ----------------------------------------------------------------------
-      4792        298        652         44        724      13295   Object Totals
+      4792        298        652         44        724      13311   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -863,8 +863,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     14180        982       1148         52        724      15375   Grand Totals
-     14180        982       1148         52        724      15375   ELF Image Totals
+     14180        982       1148         52        724      15391   Grand Totals
+     14180        982       1148         52        724      15391   ELF Image Totals
      14180        982       1148         52          0          0   ROM Totals
 
 ==============================================================================

@@ -8,8 +8,8 @@ void split_GPGGA () {
 	//str[] is a global variable
 	//This function takes the GPGGA message from str[] and splits it into tokens
 	//to easily extract quality indicator, latitude and longitude
-  data[0] = strtok(str, ",");
   int i = 0;
+	data[0] = strtok(str, ",");
   while (data[i] != NULL && i < 14) {
 		i++;
     data[i] = strtok(NULL, ",");

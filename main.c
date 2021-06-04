@@ -4,13 +4,12 @@
 #include "GPGGA_functions.h"
 #include "david.h"
 #include "distanceBetweenTwoPoints.h"
-#include "UART.h"
 
 float distance = 0;
 
 int main () {
 	//All initilizations
-	INIT_UART1();
+	initUART();
 	segments_initialize();
 	PORTF_init();
 	led_on('r'); //turn red led on until gps fix

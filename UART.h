@@ -6,7 +6,7 @@ void initUART (void)
   
 SYSCTL_RCGCUART_R |= 0x02 ;  // enable clock for UART1
 SYSCTL_RCGCGPIO_R |= 0x02 ;  // activate clock for port B 
-while (SYSCTL_PRGPIO_R & 0x02 == 0){} ; // wait for stabilization 
+while ((SYSCTL_PRGPIO_R & 0x02) == 0){} ; // wait for stabilization 
   
 // Assumes a 16 MHz bus clock, creates 9600 baud rate 
 UART1_CTL_R &= ~0x00000001 ;    // disable UART 

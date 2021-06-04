@@ -19,9 +19,13 @@ int main () {
 	led_on('r'); //turn red led on until gps fix
 	extract_GPGGA_message(); //take UART input
 	split_GPGGA();
-	while (!validity(data)) { //wait till gps fix
+	while (data_length < 6) {  // to avoid segmentation fault
 		extract_GPGGA_message();
 		split_GPGGA();
+	}
+	while (!validity(data)) { //wait till gps fix
+	extract_GPGGA_message();
+	split_GPGGA();
 	}
 	current_lat = getLatitude(data); //save current location
 	current_long = getLongitude(data);

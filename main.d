@@ -1,3 +1,12 @@
 .\main.o: main.c
 .\main.o: Headers/tm4c123gh6pm.h
-.\main.o: karim.c
+.\main.o: karim.h
+.\main.o: 7_segments.h
+.\main.o: GPGGA_functions.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\main.o: UART.h
+.\main.o: Extract-Coordinates.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\main.o: distanceBetweenTwoPoints.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

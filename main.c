@@ -8,8 +8,9 @@
 //Global variables
 float distance = 0;
 float prev_lat, prev_long, current_lat, current_long;
-//char str[150]; (externed in GPGGA_functions.h) (to save GPGGA message in)
-//char *data[15]; (externed in GPGGA_functions.h) (to split GPGGA into tokens)
+char str[150]; //(externed in GPGGA_functions.h) (to save GPGGA message in)
+char *data[15]; //(externed in GPGGA_functions.h) (to split GPGGA into tokens)
+int data_length; //(externed in GPGGA_function.h) (to monitor data length and avoid segmentation fault)
 
 int main () {
 	//All initilizations

@@ -20,11 +20,19 @@ int main () {
 		extract_GPGGA_message();
 		split_GPGGA();
 	}
-	prev_lat = getLatitude(data); //save current location
-	prev_long = getLongitude(data);
+	current_lat = getLatitude(data); //save current location
+	current_long = getLongitude(data);
+	led_on('g'); //turn green led on (gps fixed you may start moving now)
 	while (1) {
+		if (isHere(current_long, current_lat)) { //check if reached the destination
+			led_on('b'); //turn blue led on (you reached the destination)
+			print((int)distance); //show distance on 7-segments
+			break;
+		}
 		extract_GPGGA_message(); //take new input
 		split_GPGGA();
+		prev_lat = current_lat;
+		prev_long = current_long;
 		current_lat = getLatitude(data);
 		current_long = getLongitude(data);
 		distance += distanceBetweenTwoPoints(prev_lat, prev_long, current_lat, current_long); //calculate distance and increase calculated distance

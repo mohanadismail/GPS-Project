@@ -13,8 +13,8 @@ void buzzer_initialize(){
 }
 void buzzer_on(void){
 	unsigned long i;
-	while(1){
 	buzzer_initialize();
+	while(1){
 	GPIO_PORTB_DATA_R |= 0x20;
 	for(i = 1000000 ; i > 0 ; i--){}
 	GPIO_PORTB_DATA_R &= ~0x20;

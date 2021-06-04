@@ -15,7 +15,7 @@ UART1_FBRD_R = 11 ;    // FBRD = factional ((0.1666667 * 64)+0.5) = 11.16688
 UART1_LCRH_R = 0x00000070 ;  // 8 bit, no parity bits, one stop, FIFOs   (0b1110000 = 0x70) 
 UART1_CTL_R = 0x0301;   // enable RXE, TXE and UART
   
-GPIO_PORTB_CR_R |= 0x03 ; // allow changes to port B0,B1 
+ 
 GPIO_PORTB_AMSEL_R &= ~0x03;  // disable analog in port B0,B1 
 GPIO_PORTB_PCTL_R |= 0x00000011 ; // PB0 and PB1 configure for UART module 
 GPIO_PORTB_DIR_R |= 0x02 ;    //Rx PBo (in)  Tx PB1 (out) 

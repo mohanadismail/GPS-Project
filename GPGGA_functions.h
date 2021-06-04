@@ -20,38 +20,38 @@ void extract_GPGGA_message() {
 	//str[] is a global variable
 	//This function keeps on receiving input from the UART until
 	//it detects the GPGGA message, then stores the message in str[]
-    str[0] = '$';
-    str[1] = 'G';
-    str[2] = 'P';
-    str[3] = 'G';
-    str[4] = 'G';
-    str[5] = 'A';
-    int i;
-    while (1) {
-        char c = readUART();
-        i = 6;
-        if (c == '$') {
+  int i;  
+	str[0] = '$';
+  str[1] = 'G';
+  str[2] = 'P';
+  str[3] = 'G';
+  str[4] = 'G';
+  str[5] = 'A';
+  while (1) {
+		char c = readUART();
+    i = 6;
+    if (c == '$') {
+        c = readUART();
+        if (c == 'G') {
             c = readUART();
-            if (c == 'G') {
+            if (c == 'P') {
                 c = readUART();
-                if (c == 'P') {
+                if (c == 'G') {
                     c = readUART();
                     if (c == 'G') {
                         c = readUART();
-                        if (c == 'G') {
-                            c = readUART();
-                            if (c == 'A') {
-                                while (c != '\n') {
-                                    c = readUART();
-                                    str[i] = c;
-                                    i++;
-                                }
-                                break;
+                        if (c == 'A') {
+                            while (c != '\n') {
+                                c = readUART();
+                                str[i] = c;
+                                i++;
                             }
+                            break;
                         }
                     }
                 }
             }
         }
     }
+	}
 }

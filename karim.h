@@ -1,6 +1,6 @@
 #include "Headers/tm4c123gh6pm.h"
-float glbl_long; //Longtitude of the saved place
-float glbl_lat;	//Latitude of the saved place
+float glbl_long = 3116.8049; //Longtitude of the saved place
+float glbl_lat = 3003.8795;	//Latitude of the saved place
 float error_range = 0.00005; //allowed error range
 
 void PORTF_init(void){

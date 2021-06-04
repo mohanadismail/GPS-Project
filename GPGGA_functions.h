@@ -42,10 +42,11 @@ void extract_GPGGA_message() {
                     if (c == 'G') {
                         c = readUART();
                         if (c == 'A') {
+													c = readUART();
                             while (c != '\n') {
-                                c = readUART();
-                                str[i] = c;
-                                i++;
+															str[i] = c;
+                              i++;
+															c = readUART();
                             }
                             break;
                         }

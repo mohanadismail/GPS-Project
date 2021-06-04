@@ -5,8 +5,11 @@
 #include "Extract-Coordinates.h"
 #include "distanceBetweenTwoPoints.h"
 
+//Global variables
 float distance = 0;
 float prev_lat, prev_long, current_lat, current_long;
+//char str[150]; (externed in GPGGA_functions.h) (to save GPGGA message in)
+//char *data[15]; (externed in GPGGA_functions.h) (to split GPGGA into tokens)
 
 int main () {
 	//All initilizations
@@ -36,5 +39,6 @@ int main () {
 		current_lat = getLatitude(data);
 		current_long = getLongitude(data);
 		distance += distanceBetweenTwoPoints(prev_lat, prev_long, current_lat, current_long); //calculate distance and increase calculated distance
+		print((int)distance); //show distance on seven segments while moving
 	}
 }

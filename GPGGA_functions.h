@@ -3,16 +3,17 @@
 
 extern char str[150]; //global variable for storing GPGGA message
 extern char *data[15]; //global variable containing tokens of GPGGA message
+extern int data_length; //global variable that will be used to check gps fix
 
 void split_GPGGA () {
 	//str[] is a global variable
 	//This function takes the GPGGA message from str[] and splits it into tokens
 	//to easily extract quality indicator, latitude and longitude
-  int i = 0;
+  data_length = 0;
 	data[0] = strtok(str, ",");
-  while (data[i] != NULL && i < 14) {
-		i++;
-    data[i] = strtok(NULL, ",");
+  while (data[data_length] != NULL && data_length < 14) {
+		data_length++;
+    data[data_length] = strtok(NULL, ",");
   }
 }
 

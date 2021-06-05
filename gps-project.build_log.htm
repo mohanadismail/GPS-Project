@@ -4,32 +4,17 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 G:\ASU\CSE-2\Embedded Systems\GPS Project\gps-project.uvproj
-Project File Date:  06/04/2021
+Project File Date:  06/05/2021
 
 <h2>Output:</h2>
 Build target 'Target 1'
 compiling main.c...
 linking...
-Program Size: Code=13484 RO-data=1148 RW-data=152 ZI-data=728  
+Program Size: Code=15156 RO-data=1148 RW-data=168 ZI-data=728  
 ".\gps-project.axf" - 0 Error(s), 0 Warning(s).
- rad(lat_2);
-distanceBetweenTwoPoints.h(16): error:  #20: identifier "rad_long_2" is undefined
-        rad_long_1 = rad(long_1) , rad_long_2 = rad(long_2);
+f" - 0 Error(s), 0 Warning(s).
+ay not appear after executable statement in block
+        float prev_lat, prev_long, current_lat, current_long;
 main.c: 0 warnings, 2 errors
 ".\gps-project.axf" - 2 Error(s), 0 Warning(s).
-Target not created
-: error:  #268: declaration may not appear after executable statement in block
-        int D_EarthDiameter = 2 * 6371000;
-distanceBetweenTwoPoints.h(17): error:  #268: declaration may not appear after executable statement in block
-        double lat_diff = rad_lat_2 - rad_lat_1;
-distanceBetweenTwoPoints.h(18): error:  #268: declaration may not appear after executable statement in block
-        double long_diff = rad_long_2 - rad_long_1;
-distanceBetweenTwoPoints.h(19): error:  #268: declaration may not appear after executable statement in block
-        double under_sqrt = pow(sin(lat_diff / 2), 2) + cos(rad_lat_1)*cos(rad_lat_2)*pow(sin(long_diff / 2), 2);
-distanceBetweenTwoPoints.h(20): error:  #268: declaration may not appear after executable statement in block
-        double flt_sqrt = sqrtf(under_sqrt);
-distanceBetweenTwoPoints.h(21): error:  #268: declaration may not appear after executable statement in block
-        double haversineDistance = D_EarthDiameter * asinf(flt_sqrt);
-main.c: 0 warnings, 8 errors
-".\gps-project.axf" - 8 Error(s), 0 Warning(s).
 Target not created

@@ -1,5 +1,13 @@
 .\main.o: main.c
 .\main.o: Headers/tm4c123gh6pm.h
+.\main.o: C:\Keil\ARM\Inc\TI\TM4C123\TM4C123.h
+.\main.o: C:\Keil\ARM\Inc\TI\TM4C123\TM4C123GH6PM.h
+.\main.o: C:\Keil\ARM\CMSIS\Include\core_cm4.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\main.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\main.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+.\main.o: C:\Keil\ARM\CMSIS\Include\core_cm4_simd.h
+.\main.o: C:\Keil\ARM\Inc\TI\TM4C123\system_TM4C123.h
 .\main.o: led_end_coord.h
 .\main.o: 7_segments.h
 .\main.o: Extract-Coordinates.h

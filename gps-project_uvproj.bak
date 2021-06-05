@@ -436,11 +436,6 @@
               <FilePath>.\GPGGA_functions.h</FilePath>
             </File>
             <File>
-              <FileName>karim.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\karim.h</FilePath>
-            </File>
-            <File>
               <FileName>lcd.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\lcd.h</FilePath>
@@ -449,6 +444,11 @@
               <FileName>UART.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\UART.h</FilePath>
+            </File>
+            <File>
+              <FileName>led_end_coord.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\led_end_coord.h</FilePath>
             </File>
           </Files>
         </Group>

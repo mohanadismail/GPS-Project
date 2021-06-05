@@ -1,4 +1,5 @@
 #include "Headers/tm4c123gh6pm.h"
+#include <TM4C123.h>
 #include "led_end_coord.h"
 #include "7_segments.h"
 #include "Extract-Coordinates.h"
@@ -12,6 +13,10 @@ char str[150]; //(externed in GPGGA_functions.h) (to save GPGGA message in)
 char *data[15]; //(externed in GPGGA_functions.h) (to split GPGGA into tokens)
 int data_length; //(externed in GPGGA_function.h) (to monitor data length and avoid segmentation fault)
 int delay;
+
+void SystemInit() {
+	SCB->CPACR |= ((3UL << 10*2) | (3UL << 11*2));
+}
 
 int main () {
 	//All initilizations

@@ -19,7 +19,7 @@ int main () {
 	segments_initialize();
 	PORTF_init();
 	led_on('r'); //turn red led on until gps fix
-	//extract_GPGGA_message(); //take UART input
+	extract_GPGGA_message(); //take UART input
 	split_GPGGA();
 	while (data_length < 6) {  // to avoid segmentation fault
 		extract_GPGGA_message();

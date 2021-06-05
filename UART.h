@@ -29,7 +29,7 @@ GPIO_PORTB_DEN_R  |= 0x03 ;   //enable digital in port B0,B1
 // Wait for new input, then return ASCII code
 char readUART (void) {
   while((UART1_FR_R & 0x0010) != 0 ) ;      // wait until RXFE is 0
-  return((char)(UART1_DR_R & 0xFF)) ;
+  return((char)(UART1_DR_R)) ;
 }
 
 

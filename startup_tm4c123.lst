@@ -1225,10 +1225,10 @@ ARM Macro Assembler    Page 19
   960 000000F0         
   961 000000F0                 END
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M4.fp --apcs=interwork --depend=.\sta
-rtup_tm4c123.d -o.\startup_tm4c123.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS
-\Include -IC:\Keil\ARM\Inc\TI\TM4C123 --predefine="__EVAL SETA 1" --predefine="
-__MICROLIB SETA 1" --list=.\startup_tm4c123.lst startup_TM4C123.s
+Command Line: --debug --xref --cpu=Cortex-M4 --apcs=interwork --depend=.\startu
+p_tm4c123.d -o.\startup_tm4c123.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\In
+clude -IC:\Keil\ARM\Inc\TI\TM4C123 --predefine="__EVAL SETA 1" --predefine="__M
+ICROLIB SETA 1" --list=.\startup_tm4c123.lst startup_TM4C123.s
 
 
 
@@ -2564,4 +2564,4 @@ Symbol: __main
       At line 234 in file startup_TM4C123.s
 Comment: __main used once
 1 symbol
-468 symbols in table
+467 symbols in table

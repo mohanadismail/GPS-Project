@@ -2,12 +2,12 @@
 .\main.o: Headers/tm4c123gh6pm.h
 .\main.o: led_end_coord.h
 .\main.o: 7_segments.h
-.\main.o: GPGGA_functions.h
-.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
-.\main.o: UART.h
 .\main.o: Extract-Coordinates.h
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\main.o: GPGGA_functions.h
+.\main.o: UART.h
 .\main.o: distanceBetweenTwoPoints.h
 .\main.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\main.o: buzzer.h

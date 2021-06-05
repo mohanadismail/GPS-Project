@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "GPGGA_functions.h"
 
-float getLatitude(char *data[]) { return strtof(data[2], NULL); }
+char *data[15]; //externed by GPGGA_functions.h
 
-float getLongitude(char *data[]) { return strtof(data[4], NULL); }
+double getLatitude() { return atof(data[2]); }
+
+double getLongitude() { return atof(data[4]); }
 
 int validity(char *data[]) {
     

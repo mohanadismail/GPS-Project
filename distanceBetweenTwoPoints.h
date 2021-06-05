@@ -22,5 +22,5 @@ double distanceBetweenTwoPoints(double lat_1, double long_1, double lat_2, doubl
 	flt_sqrt = sqrtf(under_sqrt);
 	haversineDistance = D_EarthDiameter * asinf(flt_sqrt);
 
-	return (double)haversineDistance;
+	return haversineDistance;
 }

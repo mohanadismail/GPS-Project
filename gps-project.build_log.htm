@@ -10,18 +10,26 @@ Project File Date:  06/04/2021
 Build target 'Target 1'
 compiling main.c...
 linking...
-Program Size: Code=13028 RO-data=1148 RW-data=80 ZI-data=728  
+Program Size: Code=13484 RO-data=1148 RW-data=152 ZI-data=728  
 ".\gps-project.axf" - 0 Error(s), 0 Warning(s).
-
-f" - 0 Error(s), 0 Warning(s).
-erned by GPGGA_functions.h
-main.c(12): error:  #147: declaration is incompatible with "char *data[14]" (declared at line 6 of "Extract-Coordinates.h")
-  char *data[15]; //(externed in GPGGA_functions.h) (to split GPGGA into tokens)
+ rad(lat_2);
+distanceBetweenTwoPoints.h(16): error:  #20: identifier "rad_long_2" is undefined
+        rad_long_1 = rad(long_1) , rad_long_2 = rad(long_2);
 main.c: 0 warnings, 2 errors
 ".\gps-project.axf" - 2 Error(s), 0 Warning(s).
 Target not created
-rnings, 0 errors
-linking...
-Program Size: Code=14212 RO-data=1148 RW-data=80 ZI-data=728  
-".\gps-project.axf" - 0 Error(s), 4 Warning(s).
-d
+: error:  #268: declaration may not appear after executable statement in block
+        int D_EarthDiameter = 2 * 6371000;
+distanceBetweenTwoPoints.h(17): error:  #268: declaration may not appear after executable statement in block
+        double lat_diff = rad_lat_2 - rad_lat_1;
+distanceBetweenTwoPoints.h(18): error:  #268: declaration may not appear after executable statement in block
+        double long_diff = rad_long_2 - rad_long_1;
+distanceBetweenTwoPoints.h(19): error:  #268: declaration may not appear after executable statement in block
+        double under_sqrt = pow(sin(lat_diff / 2), 2) + cos(rad_lat_1)*cos(rad_lat_2)*pow(sin(long_diff / 2), 2);
+distanceBetweenTwoPoints.h(20): error:  #268: declaration may not appear after executable statement in block
+        double flt_sqrt = sqrtf(under_sqrt);
+distanceBetweenTwoPoints.h(21): error:  #268: declaration may not appear after executable statement in block
+        double haversineDistance = D_EarthDiameter * asinf(flt_sqrt);
+main.c: 0 warnings, 8 errors
+".\gps-project.axf" - 8 Error(s), 0 Warning(s).
+Target not created

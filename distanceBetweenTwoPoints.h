@@ -8,9 +8,9 @@ double distanceBetweenTwoPoints(double lat_1, double long_1, double lat_2, doubl
 { 
 	// converting DDM to DD
 	lat_1 = (int)(lat_1 / 100) + (lat_1 - ((int)(lat_1 / 100))*100)/60;
-  long_1 = (int)(long_1 / 100) + (long_1 - ((int)(long_1 / 100))*100)/60;
-  lat_2 = (int)(lat_2 / 100) + (lat_2 - ((int)(lat_2 / 100))*100)/60;
-  long_2 = (int)(long_2 / 100) + (long_2 - ((int)(long_2 / 100))*100)/60;
+  	long_1 = (int)(long_1 / 100) + (long_1 - ((int)(long_1 / 100))*100)/60;
+  	lat_2 = (int)(lat_2 / 100) + (lat_2 - ((int)(lat_2 / 100))*100)/60;
+  	long_2 = (int)(long_2 / 100) + (long_2 - ((int)(long_2 / 100))*100)/60;
 	// converting Coordinates degree values into radian
 	rad_lat_1 = rad(lat_1) , rad_lat_2 = rad(lat_2);
 	rad_long_1 = rad(long_1) , rad_long_2 = rad(long_2);

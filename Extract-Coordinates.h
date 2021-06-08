@@ -9,7 +9,7 @@ double getLatitude() { return atof(data[2]); }
 
 double getLongitude() { return atof(data[4]); }
 
-int validity(char *data[]) {
+int validity() {
     
   if (*data[6] <= '0') {
       

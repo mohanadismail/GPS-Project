@@ -30,9 +30,13 @@ int main () {
 		extract_GPGGA_message();
 		split_GPGGA();
 	}
-	while (!validity(data)) { //wait till gps fix
-	extract_GPGGA_message();
-	split_GPGGA();
+	while (!validity()) { //wait till gps fix
+		extract_GPGGA_message();
+		split_GPGGA();
+		while (data_length < 6) {  // to avoid segmentation fault
+			extract_GPGGA_message();
+			split_GPGGA();
+		}
 	}
 	current_lat = getLatitude(); //save current location
 	current_long = getLongitude();
@@ -46,6 +50,20 @@ int main () {
 		}
 		extract_GPGGA_message(); //take new input
 		split_GPGGA();
+		while (data_length < 6) {  // rechecking for gps fix
+			led_on('r');
+			extract_GPGGA_message();
+			split_GPGGA();
+		}
+		while (!validity()) {
+			led_on('r');
+			extract_GPGGA_message();
+			split_GPGGA();
+			while (data_length < 6) {  // to avoid segmentation fault
+				extract_GPGGA_message();
+				split_GPGGA();
+			}
+		}
 		prev_lat = current_lat;
 		prev_long = current_long;
 		current_lat = getLatitude();

@@ -1,6 +1,9 @@
 #include "Headers/tm4c123gh6pm.h"
 
+
 //------------UART1 initialization function------------
+
+
 void initUART1 (void)
 {
   
@@ -41,9 +44,12 @@ void  writeUART1 (char data) {
 }
 
 
-#include "Headers/tm4c123gh6pm.h"
+
+
 
 //------------UART5 initialization function------------
+
+
 void initUART5 (void)
 {
   

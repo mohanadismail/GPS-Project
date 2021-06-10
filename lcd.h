@@ -84,3 +84,8 @@ void print_all(unsigned char* dis , unsigned char* speed){
 	print_str(speed);
 	print_str("m/s");
 }
+void print_end(void){
+	lcd_cmd(cursor_at_2ndline);
+	print_str("Arrived!! -_-");
+	lcd_cmd(cursor_off);
+}

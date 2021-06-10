@@ -57,7 +57,7 @@ SYSCTL_RCGCUART_R |= 0x20 ;  // enable clock for UART5
 
 SYSCTL_RCGCGPIO_R |= 0x10 ;  // activate clock for port E
 
-while (SYSCTL_PRGPIO_R & 0x10 == 0){} ; // wait for stabilization 
+while ((SYSCTL_PRGPIO_R & 0x10) == 0){} ; // wait for stabilization 
 
 // Assumes a 16 MHz bus clock, creates 9600 baud rate 
 

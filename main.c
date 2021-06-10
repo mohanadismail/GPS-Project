@@ -20,7 +20,7 @@ void SystemInit() {
 
 int main () {
 	//All initilizations
-	initUART();
+	initUART1();
 	segments_initialize();
 	PORTF_init();
 	led_on('r'); //turn red led on until gps fix

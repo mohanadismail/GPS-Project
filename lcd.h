@@ -1,4 +1,4 @@
-#include "Headers/tm4c123gh6pm.h"
+#include "tm4c123gh6pm.h"
 // commands
 #define	clear 							0x01
 #define	cursor_on 					0x0F
@@ -14,23 +14,6 @@
 // connect A to VDD
 // connect RW and K to GND 
 
-void delay(unsigned long t) {
-    while(t)	t--; }
-
-void lcd_cmd(unsigned char ch){
-	GPIO_PORTA_DATA_R &=~0x04;	//RS = 0
-	GPIO_PORTB_DATA_R = ch;			//sending command
-	GPIO_PORTA_DATA_R |= 0x08;	//enable on
-	delay(100000);
-	GPIO_PORTA_DATA_R &=~0x08;	//enable off
-}
-void lcd_data(unsigned char data){
-	GPIO_PORTA_DATA_R |= 0x04;	//RS = 1
-	GPIO_PORTB_DATA_R = data;		//sending data
-	GPIO_PORTA_DATA_R |= 0x08;	//enable on
-	delay(100000);
-	GPIO_PORTA_DATA_R &=~0x08;	//enable off
-}
 void lcd_initialization(void){
 	SYSCTL_RCGCGPIO_R |= 0x03;
 	while ( (SYSCTL_RCGCGPIO_R & 0x03) == 0);
@@ -50,13 +33,31 @@ void lcd_initialization(void){
 	GPIO_PORTA_PCTL_R &= ~ 0x0000FF00;
 
 }
+void delay(unsigned long t) {
+    while(t)	t--; 
+}
+
+void lcd_cmd(unsigned char ch){
+	GPIO_PORTA_DATA_R &=~0x04;	//RS = 0
+	GPIO_PORTB_DATA_R = ch;			//sending command
+	GPIO_PORTA_DATA_R |= 0x08;	//enable on
+	delay(100000);
+	GPIO_PORTA_DATA_R &=~0x08;	//enable off
+}
+void lcd_data(unsigned char data){
+	GPIO_PORTA_DATA_R |= 0x04;	//RS = 1
+	GPIO_PORTB_DATA_R = data;		//sending data
+	GPIO_PORTA_DATA_R |= 0x08;	//enable on
+	delay(100000);
+	GPIO_PORTA_DATA_R &=~0x08;	//enable off
+}
 void lcd_ready (void){
 	lcd_cmd(mode_8pins);
 	lcd_cmd(display_on);	
 	lcd_cmd(increment_cursor);  
 	lcd_cmd(clear);
 }
-void print(int x){
+void print_int(int x){
 	int y, z, v;
 	lcd_ready();
 	y = x % 10;
@@ -68,4 +69,18 @@ void print(int x){
 	lcd_data((char) z);
 	lcd_data((char) y);
 	lcd_data('m');
+}
+void print_str(unsigned char* s){
+	int i ;
+	for(i = 0 ; s[i] != '\0' ; i++){
+		lcd_data(s[i]);
+	}
+	lcd_cmd(cursor_off);
+}
+void print_all(unsigned char* dis , unsigned char* speed){
+	lcd_ready();
+	print_str(dis);
+	print_str("m , ");
+	print_str(speed);
+	print_str("m/s");
 }

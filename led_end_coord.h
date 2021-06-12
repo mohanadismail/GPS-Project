@@ -1,7 +1,7 @@
 #include "Headers/tm4c123gh6pm.h"
-double glbl_long = 3116.8049; //Longtitude of the saved place
-double glbl_lat = 3003.8795;	//Latitude of the saved place
-double error_range = 0.00005; //allowed error range
+double glbl_long = 3116.807; //Longtitude of the saved place
+double glbl_lat = 3003.876;	//Latitude of the saved place
+double error_range = 0.003; //allowed error range
 
 void PORTF_init(void){
 	SYSCTL_RCGCGPIO_R|= 0x20;

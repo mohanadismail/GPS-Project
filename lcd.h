@@ -65,10 +65,11 @@ void print_int(int x){
 	z = x % 10;
 	x /= 10;
 	v = x;
-	lcd_data((char) v);
-	lcd_data((char) z);
-	lcd_data((char) y);
-	lcd_data('m');
+	lcd_data(v + 48);
+	lcd_data(z + 48);
+	lcd_data(y + 48);
+	
+	lcd_cmd(cursor_off);
 }
 void print_str(unsigned char* s){
 	int i ;
@@ -77,15 +78,23 @@ void print_str(unsigned char* s){
 	}
 	lcd_cmd(cursor_off);
 }
-void print_all(unsigned char* dis , unsigned char* speed){
+/*void print_all(unsigned char* dis , unsigned char* speed){
 	lcd_ready();
 	print_str(dis);
 	print_str("m , ");
 	print_str(speed);
 	print_str("m/s");
-}
+}*/
 void print_end(void){
 	lcd_cmd(cursor_at_2ndline);
 	print_str("Arrived!! -_-");
 	lcd_cmd(cursor_off);
+}
+
+void print_all(int dis , int speed) {
+	lcd_ready();
+	print_int(dis);
+	print_str("m , ");
+	print_int(speed);
+	print_str("cm/s");
 }

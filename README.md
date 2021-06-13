@@ -1,2 +1,2 @@
 # GPS-Project
-HELLOOOOOOOOOOOOOOOOOOOOOOOOO guys
+GPS Tracking System using Tiva C launchpad

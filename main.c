@@ -49,7 +49,7 @@ int main () {
 	while (1) {
 		if (isHere(current_long, current_lat)) { //check if reached the destination
 			led_on('b'); //turn blue led on (you reached the destination)
-			rate = (int)(distance/(current_time - first_time));
+			rate = (int)(distance/(current_time - first_time) * 100);
 			print_all((int)distance, rate); //show distance on 7-segments
 			print_end();
 			//print((int)distance);

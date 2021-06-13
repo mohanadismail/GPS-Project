@@ -29,24 +29,24 @@ void extract_GPGGA_message() {
   str[4] = 'G';
   str[5] = 'A';
   while (1) {
-		char c = readUART1();
+		char c = readUART5();
     i = 6;
     if (c == '$') {
-        c = readUART1();
+        c = readUART5();
         if (c == 'G') {
-            c = readUART1();
+            c = readUART5();
             if (c == 'P') {
-                c = readUART1();
+                c = readUART5();
                 if (c == 'G') {
-                    c = readUART1();
+                    c = readUART5();
                     if (c == 'G') {
-                        c = readUART1();
+                        c = readUART5();
                         if (c == 'A') {
-													c = readUART1();
+													c = readUART5();
                             while (c != '\n') {
 															str[i] = c;
                               i++;
-															c = readUART1();
+															c = readUART5();
                             }
                             break;
                         }

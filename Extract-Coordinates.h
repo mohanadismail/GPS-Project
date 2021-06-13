@@ -26,5 +26,5 @@ int validity() {
 
 double getTime() {
 	double time = atof(data[1]);
-	return (int)(time/10000)*60*60 + ((int)(time/100) - (int)(time/10000)*100)*60 + ((int)(time/100) - time);
+	return ((int)(time/10000))*60*60 + (((int)(time/100)) - ((int)(time/10000))*100)*60 + (time - ((int)(time/100))*100);
 }

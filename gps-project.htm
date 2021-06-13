@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\gps-project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\gps-project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sat Jun 12 22:01:11 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun Jun 13 03:55:37 2021
 <BR><P>
-<H3>Maximum Stack Usage =        392 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        416 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; distanceBetweenTwoPoints &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 <P>
@@ -1125,47 +1125,41 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a9]"></a>segments_initialize</STRONG> (Thumb, 406 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
+<P><STRONG><a name="[d2]"></a>segments_initialize</STRONG> (Thumb, 406 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 
-<P><STRONG><a name="[88]"></a>hundreds_digit</STRONG> (Thumb, 776 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[88]"></a>hundreds_digit</STRONG> (Thumb, 776 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
 </UL>
 
-<P><STRONG><a name="[87]"></a>tens_digit</STRONG> (Thumb, 712 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[87]"></a>tens_digit</STRONG> (Thumb, 712 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
 </UL>
 
-<P><STRONG><a name="[86]"></a>ones_digit</STRONG> (Thumb, 676 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[86]"></a>ones_digit</STRONG> (Thumb, 676 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
 </UL>
 
-<P><STRONG><a name="[85]"></a>print</STRONG> (Thumb, 52 bytes, Stack size 20 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = print
-</UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ones_digit
+<P><STRONG><a name="[85]"></a>print</STRONG> (Thumb, 52 bytes, Stack size 20 bytes, main.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ones_digit
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tens_digit
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hundreds_digit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
 
-<P><STRONG><a name="[a8]"></a>initUART1</STRONG> (Thumb, 180 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[d3]"></a>initUART1</STRONG> (Thumb, 180 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[d4]"></a>readUART1</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[d5]"></a>writeUART1</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[a8]"></a>initUART5</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8c]"></a>readUART1</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[8c]"></a>readUART5</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;extract_GPGGA_message
 </UL>
 
-<P><STRONG><a name="[d2]"></a>writeUART1</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
-
-<P><STRONG><a name="[d3]"></a>initUART5</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
-
-<P><STRONG><a name="[d4]"></a>readUART5</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
-
-<P><STRONG><a name="[d5]"></a>writeUART5</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+<P><STRONG><a name="[d6]"></a>writeUART5</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 
 <P><STRONG><a name="[89]"></a>split_GPGGA</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = split_GPGGA &rArr; strtok
@@ -1178,7 +1172,7 @@ Global Symbols
 <P><STRONG><a name="[8b]"></a>extract_GPGGA_message</STRONG> (Thumb, 140 bytes, Stack size 4 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = extract_GPGGA_message
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readUART1
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readUART5
 </UL>
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1203,12 +1197,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[90]"></a>getTime</STRONG> (Thumb, 282 bytes, Stack size 56 bytes, main.o(.text))
+<P><STRONG><a name="[90]"></a>getTime</STRONG> (Thumb, 288 bytes, Stack size 56 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = getTime &rArr; __hardfp_atof &rArr; __strtod_int &rArr; _local_sscanf &rArr; _scanf_real
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atof
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
@@ -1216,7 +1210,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[94]"></a>distanceBetweenTwoPoints</STRONG> (Thumb, 1372 bytes, Stack size 88 bytes, main.o(.text))
+<P><STRONG><a name="[95]"></a>distanceBetweenTwoPoints</STRONG> (Thumb, 1374 bytes, Stack size 88 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 384<LI>Call Chain = distanceBetweenTwoPoints &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sqrtf
@@ -1227,7 +1221,7 @@ Global Symbols
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
@@ -1247,15 +1241,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d6]"></a>lcd_initialization</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+<P><STRONG><a name="[a9]"></a>lcd_initialization</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
 
-<P><STRONG><a name="[a1]"></a>delay</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+<P><STRONG><a name="[a1]"></a>delay</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_data
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
 </UL>
 
-<P><STRONG><a name="[a0]"></a>lcd_cmd</STRONG> (Thumb, 64 bytes, Stack size 4 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<P><STRONG><a name="[a0]"></a>lcd_cmd</STRONG> (Thumb, 64 bytes, Stack size 4 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lcd_cmd
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_end
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_str
@@ -1263,69 +1261,88 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ready
 </UL>
 
-<P><STRONG><a name="[a2]"></a>lcd_data</STRONG> (Thumb, 64 bytes, Stack size 4 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+<P><STRONG><a name="[a2]"></a>lcd_data</STRONG> (Thumb, 64 bytes, Stack size 4 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lcd_data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_str
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_int
 </UL>
 
-<P><STRONG><a name="[a3]"></a>lcd_ready</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
+<P><STRONG><a name="[a3]"></a>lcd_ready</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = lcd_ready &rArr; lcd_cmd
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_all
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_int
 </UL>
 
-<P><STRONG><a name="[a4]"></a>print_int</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ready
+<P><STRONG><a name="[a4]"></a>print_int</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = print_int &rArr; lcd_ready &rArr; lcd_cmd
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ready
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_data
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_all
 </UL>
 
-<P><STRONG><a name="[a5]"></a>print_str</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_data
+<P><STRONG><a name="[a5]"></a>print_str</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = print_str &rArr; lcd_data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_data
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_all
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_end
 </UL>
 
-<P><STRONG><a name="[a6]"></a>print_end</STRONG> (Thumb, 22 bytes, Stack size 4 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_str
+<P><STRONG><a name="[a6]"></a>print_end</STRONG> (Thumb, 22 bytes, Stack size 4 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = print_end &rArr; print_str &rArr; lcd_data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_str
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
 </UL>
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
 
-<P><STRONG><a name="[a7]"></a>print_all</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_str
+<P><STRONG><a name="[a7]"></a>print_all</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = print_all &rArr; print_int &rArr; lcd_ready &rArr; lcd_cmd
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_str
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_int
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_ready
+</UL>
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[78]"></a>SystemInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
 </UL>
-<P><STRONG><a name="[77]"></a>main</STRONG> (Thumb, 612 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 392<LI>Call Chain = main &rArr; distanceBetweenTwoPoints &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[77]"></a>main</STRONG> (Thumb, 856 bytes, Stack size 32 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 416<LI>Call Chain = main &rArr; distanceBetweenTwoPoints &rArr; __hardfp_sin &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmple
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_all
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_end
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_initialization
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buzzer_on
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getTime
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validity
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getLongitude
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getLatitude
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;extract_GPGGA_message
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;split_GPGGA
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART1
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;segments_initialize
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initUART5
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isHere
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_on
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PORTF_init
@@ -1353,9 +1370,9 @@ Global Symbols
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_cos
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getTime
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isHere
 </UL>
@@ -1370,12 +1387,11 @@ Global Symbols
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getTime
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isHere
 </UL>
 
-<P><STRONG><a name="[95]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
+<P><STRONG><a name="[94]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
@@ -1384,7 +1400,8 @@ Global Symbols
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getTime
 </UL>
 
 <P><STRONG><a name="[96]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text))
@@ -1399,7 +1416,8 @@ Global Symbols
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[91]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
@@ -1411,7 +1429,8 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_sin
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_cos
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getTime
 </UL>
 
@@ -1422,7 +1441,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getTime
 </UL>
 
@@ -1434,12 +1453,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getTime
 </UL>
 
 <P><STRONG><a name="[9c]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[d7]"></a>__aeabi_cdcmpeq</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, cdcmple.o(.text), UNUSED)
@@ -1461,7 +1480,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_scanf_really_real
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[ad]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
@@ -1609,7 +1628,7 @@ Global Symbols
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassifyf
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrtf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[8e]"></a>__hardfp_atof</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, atof.o(i.__hardfp_atof))
@@ -1634,7 +1653,7 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[98]"></a>__hardfp_pow</STRONG> (Thumb, 3132 bytes, Stack size 184 bytes, pow.o(i.__hardfp_pow))
@@ -1649,13 +1668,13 @@ Global Symbols
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[97]"></a>__hardfp_sin</STRONG> (Thumb, 200 bytes, Stack size 40 bytes, sin.o(i.__hardfp_sin))
@@ -1668,7 +1687,7 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[9b]"></a>__hardfp_sqrtf</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, sqrtf.o(i.__hardfp_sqrtf))
@@ -1676,7 +1695,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;distanceBetweenTwoPoints
 </UL>
 
 <P><STRONG><a name="[c3]"></a>__ieee754_rem_pio2</STRONG> (Thumb, 972 bytes, Stack size 168 bytes, rred.o(i.__ieee754_rem_pio2))
@@ -1686,7 +1705,7 @@ Global Symbols
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
@@ -1700,7 +1719,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 </UL>
@@ -1726,7 +1745,7 @@ Global Symbols
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>

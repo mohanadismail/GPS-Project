@@ -59,12 +59,13 @@ void lcd_ready (void){
 }
 void print_int(int x){
 	int y, z, v;
-	lcd_ready();
+	
 	y = x % 10;
 	x /= 10;
 	z = x % 10;
 	x /= 10;
 	v = x;
+	
 	lcd_data(v + 48);
 	lcd_data(z + 48);
 	lcd_data(y + 48);
@@ -87,7 +88,7 @@ void print_str(unsigned char* s){
 }*/
 void print_end(void){
 	lcd_cmd(cursor_at_2ndline);
-	print_str("Arrived!! -_-");
+	print_str("Arrived!! ^_^");
 	lcd_cmd(cursor_off);
 }
 
